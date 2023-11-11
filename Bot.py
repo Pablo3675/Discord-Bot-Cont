@@ -26,8 +26,28 @@ async def time(ctx):
 
 @bot.command()
 async def consejo(ctx):
-    consejo_list = ["Recicla cartón, papel y plástico", "Reutiliza", "Apaga las luces cuando no las utilices", "Reduce el uso de plástico", "Reutiliza los materiales para hacer manualidades", "No tires basura en la calle", "Cuida la naturaleza", "Planta un árbol"]
+    consejo_list = [
+                "Recicla cartón, papel y plástico", 
+                "Reutiliza", 
+                "Apaga las luces cuando no las utilices", 
+                "Reduce el uso de plástico", 
+                "Reutiliza los materiales para hacer manualidades", 
+                "No tires basura en la calle", 
+                "Cuida la naturaleza", 
+                "Planta un árbol",
+            ]
     await ctx.send(random.choice(consejo_list))
+
+@bot.command()
+async def chiste(ctx):
+    chistes_list = [
+                "¿Por qué el árbol estaba siempre relajado?\nPorque tiene raíces profundas y una vida sin contaminantes.",
+                "¿Cúal es el chiste favorito de un ecologista?\n¡Que todos los demás son demasiado contaminantes!",
+                "¿Por qué el planeta siempre invita a los ecologistas a sus fiestas?\nPorque saben como dejar una huella verde en la pista de baile."
+                "¿Por qué el oceano no está triste?\nPor que no se deja contaminar por pensamientos negativos.",
+            ]
+    await ctx.send(random.choice(chistes_list))
+
 
 @bot.command()
 async def game(ctx):
@@ -36,7 +56,7 @@ async def game(ctx):
 
 @bot.command()
 async def Help(ctx):
-    await ctx.send("Mi lista de comandos es:\n1- $hola\n2- $objetivo\n3- $time\n4- $consejo\n5- $game")
+    await ctx.send("Mi lista de comandos es:\n1- $hola\n2- $objetivo\n3- $time\n4- $consejo\n5- $chiste\n6- $game")
 
 
 bot.run("TOKEN HERE")
